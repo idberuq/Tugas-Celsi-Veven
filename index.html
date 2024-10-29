@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Gudang Celsi & Veven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <header>
+
+            <div class="filterEntries">
+                <div class="entries">
+                    Show <select name="" id="table_size">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entries
+                </div>
+
+                <div class="filter">
+                    <label for="search">Search:</label>
+                    <input type="search" name="" id="search" placeholder="Cari Barang">
+                </div>
+            </div>
+
+            <div class="addBarangBtn">
+                <button>Tambah Barang</button>
+            </div>
+
+        </header>
+
+
+        <table>
+
+            <thead>
+                <tr class="heading">
+                    <th>No</th>
+                    <th>Gambar</th>
+                    <th>Nama Barang</th>
+                    <th>Kategori</th>
+                    <th>Harga Jual</th>
+                    <th>Stok</th>
+                    <th>Tangal Barang Masuk</th>
+                    <th>Deskripsi</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+
+            <tbody class="barangInfo">
+                
+            </tbody>
+
+        </table>
+
+
+        <footer>
+            <span class="showEntries">Showing 1 to 10 of 50 entries</span>
+            <div class="pagination">
+
+        </footer>
+    </div>
+
+
+    <!--Popup Form-->
+
+    <div class="dark_bg">
+
+        <div class="popup">
+             <header>
+                <h2 class="modalTitle">Fill the Form</h2>
+                <button class="closeBtn">&times;</button>
+             </header>
+
+             <div class="body">
+                <form action="#" id="myForm">
+                    <div class="imgholder">
+                        <label for="uploadimg" class="upload">
+                            <input type="file" name="" id="uploadimg" class="picture">
+                            <i class="fa-solid fa-plus"></i>
+                        </label>
+                        <img src="./img/pic1.png" alt="" width="150" height="150" class="img">
+                    </div>
+
+                    <div class="inputFieldContainer">
+
+                        <div class="nameKategoriField">
+                            <div class="form_control">
+                                <label for="bName">Nama Barang:</label>
+                                <input type="text" name="" id="bName" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="kategori">Kategori:</label>
+                                <input type="text" name="" id="kategori" required>
+                            </div>
+                        </div>
+
+                        <div class="hargaStokField">
+                            <div class="form_control">
+                                <label for="harga">Harga:</label>
+                                <input type="number" name="" id="harga" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="stok">Stok:</label>
+                                <input type="number" name="" id="stok" required>
+                            </div>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="sDate">Tangal Barang Masuk:</label>
+                            <input type="date" name="" id="sDate" required>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="deskripsi">Deskripsi:</label>
+                            <input type="text" name="" id="deskripsi" required>
+                        </div>
+
+                    </div>
+                </form>
+             </div>
+
+             <footer class="popupFooter">
+                <button form="myForm" class="submitBtn">Submit</button>
+             </footer>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
